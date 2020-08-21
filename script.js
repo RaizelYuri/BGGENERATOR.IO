@@ -1,21 +1,54 @@
 var css = document.querySelector("h3");
-var color1 = document.getElementById("color1");
-var color2 = document.getElementById("color2");
+var color1 = document.querySelector(".color1");
+var color2 = document.querySelector(".color2");
 var body = document.getElementById("gradient");
 
+color1.addEventListener("input", elementGradient);
+color2.addEventListener("input", elementGradient);
 
 
-color1.addEventListener("input", linearGradient);
-color2.addEventListener("input", linearGradient);
+function elementGradient(a,b) {
+	body.style.background = 
+	"linear-gradient(to right , " 
+	+ color1.value 
+	+ " , " 
+	+ color2.value 
+	+ ")";
 
-function linearGradient() {
-	body.style.background =
-		"linear-gradient(to right, "
-		+ color1.value 
-		+ ", " 
-		+ color2.value 
-		+ ")";
+	colorContent();
 
-		css.textContent = body.style.background + ";";
+} 
+
+function getRamdomHex(){
+	var letters = "0123456789ABCDEF";
+	var color = "#";
+	for(var i=0; i < 6; i++)
+	 color += letters [Math.floor(Math.random() *16)]; {
+		return color;
+	}
 }
 
+
+
+button.addEventListener("click", getRandomColor);
+
+
+
+function getRandomColor(){
+	body.style.background = 
+	"linear-gradient(to right , " 
+	+ getRamdomHex()
+	+ " , " 
+	+ getRamdomHex() 
+	+ ")";
+	
+	colorContent(); 
+}
+
+
+
+elementGradient(color1.value,color2.value);
+
+function colorContent() {
+	return css.textContent = body.style.background + ";";
+}
