@@ -17,7 +17,7 @@ h1 {
     width: 100%;
 }
 
-h3 button {
+h3 button .color1 .color2  {
 	font: 900 1em 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
@@ -25,3 +25,14 @@ h3 button {
     letter-spacing: 0.01em;
 
 }
+
+ul {
+    list-style: none;
+    align-items: center;
+    font: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
